@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>DoubleWing&#39;Blog</title>
+  <icon>https://www.gravatar.com/avatar/f69ff1ffbe594409dfb6e458b56c16a0</icon>
+  <subtitle>喜欢就坚持吧！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/DoubleWing/DoubleWing.github.io/"/>
+  <updated>2019-05-01T09:18:29.094Z</updated>
+  <id>https://github.com/DoubleWing/DoubleWing.github.io/</id>
+  
+  <author>
+    <name>张昭</name>
+    <email>1318911702@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>散列(hash)学习</title>
+    <link href="https://github.com/DoubleWing/DoubleWing.github.io//posts/4cba6a27/"/>
+    <id>https://github.com/DoubleWing/DoubleWing.github.io//posts/4cba6a27/</id>
+    <published>2019-05-01T08:27:20.000Z</published>
+    <updated>2019-05-01T09:18:29.094Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="散列-hash"><a href="#散列-hash" class="headerlink" title="散列(hash)"></a><strong>散列(hash)</strong></h1><p>散列或者说哈希，通过学习我知道：<br>是一种将元素通过散列函数转化为整数，使得整数可以尽量唯一地代表这个元素<br>那么可以用key代表元素未转化，使用H(key)代表转化后的整数 </p><h2 id="散列函数"><a href="#散列函数" class="headerlink" title="散列函数"></a>散列函数</h2><ul><li>直接定址法  </li><li>平方取中法  </li><li>除留余数法  </li></ul><h2 id="解决冲突的方法"><a href="#解决冲突的方法" class="headerlink" title="解决冲突的方法"></a>解决冲突的方法</h2><ul><li>线性探查法（Linear Probing）  </li><li>平方探查法（Quadratic Probing）  </li><li>链地址法（拉链法）  </li></ul><h2 id="整数hash"><a href="#整数hash" class="headerlink" title="整数hash"></a>整数hash</h2><h2 id="字符串hash"><a href="#字符串hash" class="headerlink" title="字符串hash"></a>字符串hash</h2><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;散列-hash&quot;&gt;&lt;a href=&quot;#散列-hash&quot; class=&quot;headerlink&quot; title=&quot;散列(hash)&quot;&gt;&lt;/a&gt;&lt;strong&gt;散列(hash)&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;散列或者说哈希，通过学习我知道：&lt;br&gt;是一种将元素通过散列函
+      
+    
+    </summary>
+    
+    
+      <category term="集合框架" scheme="https://github.com/DoubleWing/DoubleWing.github.io/tags/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基础的排序算法</title>
+    <link href="https://github.com/DoubleWing/DoubleWing.github.io//posts/4c06727b/"/>
+    <id>https://github.com/DoubleWing/DoubleWing.github.io//posts/4c06727b/</id>
+    <published>2019-04-30T05:12:41.000Z</published>
+    <updated>2019-04-30T11:27:52.287Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a><strong>算法复杂度</strong></h1><ul><li>一个算法是由控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的操作）构成的</li><li>同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。</li><li>算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。  </li></ul><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><ul><li>一个算法中的语句执行次数。记为T(n),n称为问题的规模;<br>若存在某个函数f(n)，当 n –> ∞时，T(n) / f(n) 为不等于0的常数，则称f(n)是T(n)的同数量级函数。记为T(n) = O(f(n))；称O(f(n))为算法的渐进时间复杂度，简称时间复杂度。</li><li>常见的时间复杂度</li></ul><table><thead><tr><th style="text-align:center">常数阶</th><th style="text-align:center">对数阶</th><th style="text-align:center">线性阶</th><th style="text-align:center">线性对数阶</th><th style="text-align:center">平方阶</th><th style="text-align:center">立方阶</th><th style="text-align:center">K次方阶</th><th style="text-align:center">指数阶</th></tr></thead><tbody><tr><td style="text-align:center">O(1)</td><td style="text-align:center">O(log2^n)</td><td style="text-align:center">O(n)</td><td style="text-align:center">O(nlog2^n)</td><td style="text-align:center">O(n^2)</td><td style="text-align:center">O(n^3)</td><td style="text-align:center">O(n^k)</td><td style="text-align:center">O(2^n)</td></tr></tbody></table><blockquote><p>随着问题规模n的不断增大，上述时间复杂度不断增大，算法的执行效率越低。</p></blockquote><h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>一个算法的空间复杂度S(n)定义为该算法所耗费的存储空间，它也是问题规模n的函数。空间复杂度是对一个算法在运行过程中临时占用存储空间大小的量度。</p><ul><li>存储算法本身所占用的存储空间</li><li>算法的输入输出数据所占用的存储空间</li><li>算法在运行过程中临时占用的存储空间</li></ul><h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a><strong>冒泡排序</strong></h1><p>冒泡排序是最基础的一种排序算法，让序列元素像汽泡一样”浮”上来<br>冒泡排序本质在于交换元素，每次判断两个相邻元素的大小交换位置，直到剩余元素为0时。</p><h2 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h2><ul><li>比较相邻的元素。如果第一个比第二个大，则交换</li><li>整个过程进行n个元素-1次<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">int main(){</span><br><span class="line">//定义一个数组</span><br><span class="line">int a[10] = {2,0,1,9,4,3,0};</span><br><span class="line">//遍历n-1数组</span><br><span class="line">for (int i =0;i<=6;i++){</span><br><span class="line">    //第i次从a[0]~a[n-i]与他们下一个数比较</span><br><span class="line">    for(int j=0;j<6-i;j++){</span><br><span class="line">        //判断相邻大小进行交换</span><br><span class="line">        if(a[j]>a[j+1]){</span><br><span class="line">            //中间变量temp</span><br><span class="line">            int temp = a[j];</span><br><span class="line">            a[j] = a[j+1];</span><br><span class="line">            a[j+1] = temp;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">//打印输出</span><br><span class="line">for(int i=0;i<7;i++){</span><br><span class="line">    printf("%d",a[i]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">return 0;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></li></ul><blockquote><p>输出结果：0 0 1 2 3 4 9</p></blockquote><h2 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h2><ul><li>“正序”排列时，比较次数为n-1，所以最好情况下的时间复杂度为O(n)；  </li><li>“逆序”排序时，比较次数为n(n-1)/2，所以冒泡排序在最坏情况下的时间复杂度为O(n^2)</li></ul><ul><li>过程中需要一个临时变量temp，所需要的额外空间为1，空间复杂度则为O(1)。  </li><li>元素交换时，相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。  </li></ul><table><thead><tr><th style="text-align:center">时间复杂度</th><th style="text-align:center">最好情况</th><th style="text-align:center">最坏情况</th><th style="text-align:center">平均复杂度</th><th style="text-align:center">空间复杂度</th><th>稳定性</th></tr></thead><tbody><tr><td style="text-align:center">冒泡排序</td><td style="text-align:center">O(n)</td><td style="text-align:center">O(n^2)</td><td style="text-align:center">O(n^2)</td><td style="text-align:center">O(1)</td><td>稳定</td></tr></tbody></table><hr><hr><h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a><strong>选择排序</strong></h1><p>简单选择排序就是选择元素放置<br>选择无序序列中最小（大）的元素放入有序序列中，进行n个元素次数的操作  </p><h2 id="算法步骤-1"><a href="#算法步骤-1" class="headerlink" title="算法步骤"></a>算法步骤</h2><ul><li>初始有序区和无序区  </li><li>从a[0]开始判断无序序列中最小的元素  </li><li>与a[0]交换，记录为有序序列</li><li>进行n个元素次，直到全部有序  </li></ul><h2 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">int main(){</span><br><span class="line">    //定义一个数组</span><br><span class="line">    int a[10] = {2,0,1,9,4,3,0};</span><br><span class="line">    //进行n次操作</span><br><span class="line">    for(int i = 0;i<=6;i++){</span><br><span class="line">        //k为最小值数组下标</span><br><span class="line">        int k = i;</span><br><span class="line">        //遍历无序序列</span><br><span class="line">        for(int j = i;j<=6;j++){</span><br><span class="line">            //选择最大元素</span><br><span class="line">            if(a[j]<a[k]){</span><br><span class="line">                //交换i和j的下标</span><br><span class="line">                k=j;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        //中间变量temp</span><br><span class="line">        int temp = a[i];</span><br><span class="line">        a[i] = a[k];</span><br><span class="line">        a[k] = temp;</span><br><span class="line">    }</span><br><span class="line">    //打印输出</span><br><span class="line">    for(int i=0;i<7;i++){</span><br><span class="line">        printf("%d",a[i]);</span><br><span class="line">    }</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><blockquote><p>输出结果：9 4 3 2 1 0 0  </p></blockquote><h2 id="性能分析-1"><a href="#性能分析-1" class="headerlink" title="性能分析"></a>性能分析</h2><ul><li>简单选择排序表现最稳定的排序算法之一，无论正序倒序无序数据进去都是O(n2)的时间复杂度  </li><li>过程中需要一个临时变量temp，所需要的额外空间为1，空间复杂度则为O(1)。  </li><li>元素交换时，相同元素的前后顺序发生改变，所以冒泡排序是一种不稳定的排序算法。  </li></ul><table><thead><tr><th style="text-align:center">时间复杂度</th><th style="text-align:center">最好情况</th><th style="text-align:center">最坏情况</th><th style="text-align:center">平均复杂度</th><th style="text-align:center">空间复杂度</th><th>稳定性</th></tr></thead><tbody><tr><td style="text-align:center">选择排序</td><td style="text-align:center">O(n^2)</td><td style="text-align:center">O(n^2)</td><td style="text-align:center">O(n^2)</td><td style="text-align:center">O(1)</td><td>不稳定</td></tr></tbody></table><hr><hr><h1 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a><strong>直接插入排序</strong></h1><p>通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入  </p><h2 id="算法步骤-2"><a href="#算法步骤-2" class="headerlink" title="算法步骤"></a>算法步骤</h2><ul><li>序列第一个元素已经有序  </li><li>取未排序数据为新元素  </li><li>从后向前比较是否比新元素大</li><li>在其后插入新元素  </li><li>反复n-1趟排序  </li></ul><h2 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h2><pre><code>int main(){    int a[10] = {2,0,1,9,4,3,0};    //进行n-1趟排序    for(int i=1;i<=6;i++){        //temp存放        int temp = a[i];        //j        int j = i-1;        //temp小于前一个元素        while(j>=0&&temp<a[j-1]){            //把序列后移一位            a[j] = a[j-1];            j--;        }        //插入位置为j        a[j] = temp;    }     //打印输出    for(int i=0;i<7;i++){        printf("%d",a[i]);    }    return 0;}</code></pre><blockquote><p>输出结果：0 0 1 2 3 4 9</p></blockquote><h2 id="性能分析-2"><a href="#性能分析-2" class="headerlink" title="性能分析"></a>性能分析</h2><ul><li>简单插入排序在最好情况下，需要比较n-1次，无需交换元素，时间复杂度为O(n)。  </li><li>在最坏情况下，时间复杂度依然为O(n2)。  </li><li>但是在数组元素随机排列的情况下，插入排序还是要优于上面两种排序的。  </li><li>过程中需要一个临时变量temp，所需要的额外空间为1，空间复杂度则为O(1)。  </li><li>元素交换时，相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。  </li></ul><table><thead><tr><th style="text-align:center">时间复杂度</th><th style="text-align:center">最好情况</th><th style="text-align:center">最坏情况</th><th style="text-align:center">平均复杂度</th><th style="text-align:center">空间复杂度</th><th>稳定性</th></tr></thead><tbody><tr><td style="text-align:center">简单插入排序</td><td style="text-align:center">O(n)</td><td style="text-align:center">O(n^2)</td><td style="text-align:center">O(n^2)</td><td style="text-align:center">O(1)</td><td>稳定</td></tr></tbody></table><hr><hr><h1 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a><strong>希尔排序</strong></h1><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;算法复杂度&quot;&gt;&lt;a href=&quot;#算法复杂度&quot; class=&quot;headerlink&quot; title=&quot;算法复杂度&quot;&gt;&lt;/a&gt;&lt;strong&gt;算法复杂度&lt;/strong&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;一个算法是由控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://github.com/DoubleWing/DoubleWing.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理解学习MySQL</title>
+    <link href="https://github.com/DoubleWing/DoubleWing.github.io//posts/993e51d1/"/>
+    <id>https://github.com/DoubleWing/DoubleWing.github.io//posts/993e51d1/</id>
+    <published>2018-12-01T07:25:27.000Z</published>
+    <updated>2019-04-30T05:00:27.096Z</updated>
+    
+    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>测试</title>
+    <link href="https://github.com/DoubleWing/DoubleWing.github.io//posts/24d91ba1/"/>
+    <id>https://github.com/DoubleWing/DoubleWing.github.io//posts/24d91ba1/</id>
+    <published>2018-11-04T12:44:59.000Z</published>
+    <updated>2018-11-06T13:45:59.551Z</updated>
+    
+    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo+github搭建个人博客教程</title>
+    <link href="https://github.com/DoubleWing/DoubleWing.github.io//posts/6688b830/"/>
+    <id>https://github.com/DoubleWing/DoubleWing.github.io//posts/6688b830/</id>
+    <published>2018-11-04T06:57:32.000Z</published>
+    <updated>2019-04-30T06:48:13.230Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a><strong>环境搭建</strong></h1><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><ol><li>下载并安装Node.js 官网： <a href="http://nodejs.org/download/" target="_blank" rel="noopener">http://nodejs.org/download/</a></li><li>安装的时候Custom Setup选择第一个，安装完成。</li></ol><h2 id="Git下载安装及其配置"><a href="#Git下载安装及其配置" class="headerlink" title="Git下载安装及其配置"></a>Git下载安装及其配置</h2><ol><li>下载并安装Git 官网:  <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></li><li>安装Git一路Next即可,Git安装完成.  </li><li>Git简单的教程请看廖雪峰的官方网:<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></li></ol><h2 id="安装并启动Hexo"><a href="#安装并启动Hexo" class="headerlink" title="安装并启动Hexo"></a>安装并启动Hexo</h2><ol><li><p>在自己的本地磁盘中手动新建一个Hexo文件夹来存储本地文件。</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://i.loli.net/2018/11/04/5bdef8af8cde0.png" alt title>                </div>                <div class="image-caption"></div>            </figure></li><li><p>到你新建的Hexo根目录右键选择  Git Bash Here</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://i.loli.net/2018/11/04/5bdefe5eeae87.png" alt title>                </div>                <div class="image-caption"></div>            </figure></li><li><p>在git命令框安装Hexo，输入命令<br><code>npm install -g hexo</code></p></li><li>安装完成后，初始化hexo命令:<br><code>hexo init</code></li><li><p>启动hexo服务<br>命令：npm install –><br>hexo s –>hexo clean –>hexo g –>hexo d  </p></li><li><p>hexo s 命令部署本地服务器<br>浏览器输入<a href="http://localhost:4000可访问到初始页面" target="_blank" rel="noopener">http://localhost:4000可访问到初始页面</a>  </p></li><li><p>如果部署提示找不到git<br>解决办法：<br>在Hexo 3.0版本后deploy git 被分开的，所以需要安装。<br>安装命令如下:<br><code>npm install hexo-deployer-git --save</code><br>安装好后再尝试一下重新部署就ok。</p><blockquote><p><em>如果下载速度缓慢可以配置全局配置设置到淘宝源:</em> 命令如下:<br><code>npm config set registry https://registry.npm.taobao.org</code>  </p></blockquote></li></ol><h1 id="Github相关"><a href="#Github相关" class="headerlink" title="Github相关"></a><strong>Github相关</strong></h1><h2 id="注册github的账号"><a href="#注册github的账号" class="headerlink" title="注册github的账号"></a>注册github的账号</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://s1.ax1x.com/2018/11/06/iT9LuD.png" alt title>                </div>                <div class="image-caption"></div>            </figure><h2 id="创建一个新的仓库"><a href="#创建一个新的仓库" class="headerlink" title="创建一个新的仓库"></a>创建一个新的仓库</h2><p><img src="https://s1.ax1x.com/2018/11/06/iT9HgK.png" alt></p><pre><code>仓库名必须遵守相应格式：username.github.io 这样子在访问主页的时候直接用 username.github.io 就能访问.</code></pre><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://s1.ax1x.com/2018/11/06/iT9bjO.png" alt title>                </div>                <div class="image-caption"></div>            </figure><p> 现在需要把你电脑里的clone到github仓库就需要git来帮忙了</p><h2 id="设置Git的姓名和邮箱"><a href="#设置Git的姓名和邮箱" class="headerlink" title="设置Git的姓名和邮箱"></a>设置Git的姓名和邮箱</h2><p>命令： </p><p><code>git config --global user.name "your_name"</code><br><code>git config --global user.email "your_email"</code>  </p><h2 id="添加SSH-key"><a href="#添加SSH-key" class="headerlink" title="添加SSH key"></a>添加SSH key</h2><p>为了每次提交到github不需要重复输入账号密码，所以要设置ssh密钥，github连接仓库是由ssh密钥认证的,所以要添加自己的密钥进去  </p><p>输入以下命令：<br><code>ssh-keygen -t rsa -C "your_email"</code><br>回车输入密码可继续三次回车跳过  </p><p>在/Users/your_user_directory/.ssh/x下生成了私有密钥id_rsa和公开密钥id_rsa.pub<br>》选择公有密钥用记事本打开<br></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://s1.ax1x.com/2018/11/06/iTPxpt.png" alt title>                </div>                <div class="image-caption"></div>            </figure><p></p><ul><li>复制公钥内容</li><li>进入github设置中的ssh设置  </li><li>新建一个ssh-key，Title随便取一个，粘贴刚复制的key，保存<br><img src="https://s1.ax1x.com/2018/11/06/iTi3N9.png" alt><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://s1.ax1x.com/2018/11/06/iTiY1x.png" alt title>                </div>                <div class="image-caption"></div>            </figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://s1.ax1x.com/2018/11/06/iTiRu8.png" alt title>                </div>                <div class="image-caption"></div>            </figure>最后验证是否添加成功<br>返回到hexo文件夹打开git bash命令行，输入命令：<br><code>ssh -T git@github.com</code><br><img src="https://s1.ax1x.com/2018/11/06/iTi5Nj.png" alt><br>看到这段话说明成功连接到你的github。<h1 id="浏览博客"><a href="#浏览博客" class="headerlink" title="浏览博客"></a><strong>浏览博客</strong></h1></li></ul><ol><li><code>hexo s</code>  <blockquote><p>(hexo sever=hexo s)一般用简写方便使用,打开本地服务器，方便发布前的调试。</p></blockquote></li><li><code>hexo g</code>  <blockquote><p>(hexo generate=hexo g)一般用简写，是生成静态文件的命令。</p></blockquote></li><li><p><code>hexo d</code>  </p><blockquote><p>(hexo deploy=hexo d)也是简写，部署之前预先生成静态文件  </p></blockquote><p>更多指令请看官方文档：<a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/commands</a>  </p></li><li><p>浏览器中输入<a href="http://githubname.github.io" target="_blank" rel="noopener">http://githubname.github.io</a>  就可以看到hexo博客了!!!。</p><h1 id="域名设置"><a href="#域名设置" class="headerlink" title="域名设置"></a><strong>域名设置</strong></h1></li></ol><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p> 去阿里云或者其他域名网站选择购买域名，这里提供几个域名站的连接：<br> <a href="https://sg.godaddy.com/zh/" target="_blank" rel="noopener">https://sg.godaddy.com/zh/</a>  #Godady<br> <a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">https://wanwang.aliyun.com/</a> #阿里云<br> <a href="https://dnspod.cloud.tencent.com/" target="_blank" rel="noopener">https://dnspod.cloud.tencent.com/</a> #腾讯云  </p><h2 id="设置域名解析"><a href="#设置域名解析" class="headerlink" title="设置域名解析"></a>设置域名解析</h2><p>  通过域名解析将我们的GitHub主页的域名解析到我们自己买的域名上面来，这样我们就可以通过我们自己的域名来访问我们的博客了  </p><ol><li><p>我是使用的阿里云解析，登陆域名控制台,看到你的域名后<br>点击解析 </p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://s1.ax1x.com/2018/11/06/iTAauV.png" alt title>                </div>                <div class="image-caption"></div>            </figure></li><li><p>记录类型为：CNAME<br>记录两个值：@和www<br>记录值： 自己的github仓库地址<br>TTL： 10分钟</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://s1.ax1x.com/2018/11/06/iTA4ED.png" alt title>                </div>                <div class="image-caption"></div>            </figure></li><li>接下来需要在hexo根目录的source文件夹里创建CNAME文件，不带任何后缀，里面添加你的域名信息，如：name.com<br><img src="https://s1.ax1x.com/2018/11/06/iTE1r6.png" alt><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://s1.ax1x.com/2018/11/06/iTEJaD.png" alt title>                </div>                <div class="image-caption"></div>            </figure></li></ol><p>最后重新部署你的博客<br>hexo clean # 清理<br>hexo g<br>hexo d<br>通过你自己的域名访问你的博客吧！</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a><strong>最后</strong></h1><p>Hexo的配置文件设置及themes模板主题修改在下一篇文章当中。<br>感谢你的阅读，文章用于个人学习记录。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;环境搭建&quot;&gt;&lt;a href=&quot;#环境搭建&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;&lt;strong&gt;环境搭建&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;Node-js&quot;&gt;&lt;a href=&quot;#Node-js&quot; class=&quot;heade
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
