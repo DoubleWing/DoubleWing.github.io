@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="集合框架">
+    <meta name="keywords" content="哈希">
     
     
 
@@ -39,18 +39,18 @@
 
 
     
-    <meta name="description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数  散列函数 直接定址法   平方取中法   除留余数法    解决冲突的方法 线性探查法（Linear Probing）   平方探查法（Quadratic Probing）   链地址法（拉链法）    整数has">
-<meta name="keywords" content="集合框架">
+    <meta name="description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数">
+<meta name="keywords" content="哈希">
 <meta property="og:type" content="article">
 <meta property="og:title" content="散列(hash)学习">
 <meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/index.html">
 <meta property="og:site_name" content="DoubleWing&#39;Blog">
-<meta property="og:description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数  散列函数 直接定址法   平方取中法   除留余数法    解决冲突的方法 线性探查法（Linear Probing）   平方探查法（Quadratic Probing）   链地址法（拉链法）    整数has">
+<meta property="og:description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-01T09:18:29.094Z">
+<meta property="og:updated_time" content="2019-06-08T09:43:57.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="散列(hash)学习">
-<meta name="twitter:description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数  散列函数 直接定址法   平方取中法   除留余数法    解决冲突的方法 线性探查法（Linear Probing）   平方探查法（Quadratic Probing）   链地址法（拉链法）    整数has">
+<meta name="twitter:description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数">
     
         <link rel="alternate" type="application/atom+xml" title="DoubleWing&#39;Blog" href="/atom.xml">
     
@@ -192,7 +192,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#散列-hash"><span class="post-toc-number">1.</span> <span class="post-toc-text">散列(hash)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#散列函数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">散列函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决冲突的方法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">解决冲突的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#整数hash"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">整数hash</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字符串hash"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">字符串hash</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扩展"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">扩展</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#散列-hash"><span class="post-toc-number">1.</span> <span class="post-toc-text">散列(hash)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#散列函数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">散列函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#冲突"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">冲突</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决冲突的方法"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">解决冲突的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字符串hash"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">字符串hash</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扩展"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">扩展</span></a></li></ol></li></ol>
         </nav>
     </aside>
    
@@ -222,21 +222,23 @@
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="散列-hash"><a href="#散列-hash" class="headerlink" title="散列(hash)"></a><strong>散列(hash)</strong></h1><p>散列或者说哈希，通过学习我知道：<br>是一种将元素通过散列函数转化为整数，使得整数可以尽量唯一地代表这个元素<br>那么可以用key代表元素未转化，使用H(key)代表转化后的整数 </p>
+            <h1 id="散列-hash"><a href="#散列-hash" class="headerlink" title="散列(hash)"></a><strong>散列(hash)</strong></h1><p>散列或者说哈希，通过学习我知道：<br>是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素<br>那么可以用key代表元素未转化，使用H(key)代表转化后的整数                                                                                                         </p>
 <h2 id="散列函数"><a href="#散列函数" class="headerlink" title="散列函数"></a>散列函数</h2><ul>
-<li>直接定址法  </li>
-<li>平方取中法  </li>
-<li>除留余数法  </li>
+<li>直接定址法<br>恒等变换或是线性变换，即直接使用key作为数组下标，H（key）= a*key+b；</li>
+<li>平方取中法<br>使用KEY^2的中间若干位来作为hash值，H（key）= key^2的中间几位；</li>
+<li>除留余数法<br>把key除以一个数mod所得到的余数作为hash值，H（key）= key % mod ；</li>
 </ul>
+<h2 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h2><p>我们发现有时候函数并不能代表一个值，通过除留余数法我们可能出现两个不同的key同时取余出相同的哈希值H（key），这时候就产生了冲突。  </p>
 <h2 id="解决冲突的方法"><a href="#解决冲突的方法" class="headerlink" title="解决冲突的方法"></a>解决冲突的方法</h2><ul>
-<li>线性探查法（Linear Probing）  </li>
-<li>平方探查法（Quadratic Probing）  </li>
-<li>链地址法（拉链法）  </li>
+<li>线性探查法（Linear Probing）<br>当出现冲突时，就检查下一个位置哈希值H（key）+1的位置是否被占用，没有就使用；如果仍然被占用<br>就继续往下查找直到表最大，超过表长返回表的首位继续查找，如此循环；不过此方法效率低下，容易出现连续的被占用情况。</li>
+<li>平方探查法（Quadratic Probing）<br>为了避免反复查找位置，可以使用平方顺序进行查找，检查下一个位置H（key）+1^2，H（key）-1^2，H（key）+2^2，H（key）-2^2，<br>H(key)+3^2,H(key)+3^2……;当H（key）+k^2大于表长，则使用H（key）+k^2 %表长，H（key）-k^2小于0，则使用（（H(key)-k^2）%表长+表长）%表长，得到一个非负数的哈希值；</li>
+<li>链地址法（拉链法）<br>将所有hash值相同的key连接成一个单链表，其中的List[h]存放H（key）= h的一条单链表，当冲突发生时就遍历链表来寻找所有H（key） = h的key；  </li>
 </ul>
-<h2 id="整数hash"><a href="#整数hash" class="headerlink" title="整数hash"></a>整数hash</h2><h2 id="字符串hash"><a href="#字符串hash" class="headerlink" title="字符串hash"></a>字符串hash</h2><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><script>
+<h2 id="字符串hash"><a href="#字符串hash" class="headerlink" title="字符串hash"></a>字符串hash</h2><p>前面的方法都是基于key为整数，那么当想使用一个hash尽可能代表一个字符串就需要其他的方法。  </p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -261,7 +263,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2019-05-01T09:18:29.094Z" itemprop="dateUpdated">2019-05-01 17:18:29</time>
+    最后更新：<time datetime="2019-06-08T09:43:57.992Z" itemprop="dateUpdated">2019-06-08 17:43:57</time>
 </span>
 
 
@@ -288,7 +290,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/集合框架/">集合框架</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/哈希/">哈希</a></li></ul>
 
 
             
