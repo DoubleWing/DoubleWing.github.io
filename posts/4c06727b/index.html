@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="算法">
+    <meta name="keywords" content="排序算法">
     
     
 
@@ -40,14 +40,14 @@
 
     
     <meta name="description" content="算法复杂度 一个算法是由控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的操作）构成的 同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。 算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。    时间复杂度 一个算法中的语句执行次数。记为T(n),n称为问题的规模;若存在某个函数f(n)，当 n –&amp;gt; ∞时，T(n) /">
-<meta name="keywords" content="算法">
+<meta name="keywords" content="排序算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基础的排序算法">
 <meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/4c06727b/index.html">
 <meta property="og:site_name" content="DoubleWing&#39;Blog">
 <meta property="og:description" content="算法复杂度 一个算法是由控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的操作）构成的 同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。 算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。    时间复杂度 一个算法中的语句执行次数。记为T(n),n称为问题的规模;若存在某个函数f(n)，当 n –&amp;gt; ∞时，T(n) /">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-30T11:27:52.287Z">
+<meta property="og:updated_time" content="2019-10-21T04:12:23.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础的排序算法">
 <meta name="twitter:description" content="算法复杂度 一个算法是由控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的操作）构成的 同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。 算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。    时间复杂度 一个算法中的语句执行次数。记为T(n),n称为问题的规模;若存在某个函数f(n)，当 n –&amp;gt; ∞时，T(n) /">
@@ -192,7 +192,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#算法复杂度"><span class="post-toc-number">1.</span> <span class="post-toc-text">算法复杂度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#时间复杂度"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">时间复杂度</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#空间复杂度"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">空间复杂度</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#冒泡排序"><span class="post-toc-number">2.</span> <span class="post-toc-text">冒泡排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法步骤"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">算法步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码示例"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">代码示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能分析"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">性能分析</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#选择排序"><span class="post-toc-number">3.</span> <span class="post-toc-text">选择排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法步骤-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">算法步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码示例-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">代码示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能分析-1"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">性能分析</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#直接插入排序"><span class="post-toc-number">4.</span> <span class="post-toc-text">直接插入排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法步骤-2"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">算法步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码示例-2"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">代码示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能分析-2"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">性能分析</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#希尔排序"><span class="post-toc-number">5.</span> <span class="post-toc-text">希尔排序</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#算法复杂度"><span class="post-toc-number">1.</span> <span class="post-toc-text">算法复杂度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#时间复杂度"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">时间复杂度</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#空间复杂度"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">空间复杂度</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#冒泡排序"><span class="post-toc-number">2.</span> <span class="post-toc-text">冒泡排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法步骤"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">算法步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码示例"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">代码示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能分析"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">性能分析</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#选择排序"><span class="post-toc-number">3.</span> <span class="post-toc-text">选择排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法步骤-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">算法步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码示例-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">代码示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能分析-1"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">性能分析</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#直接插入排序"><span class="post-toc-number">4.</span> <span class="post-toc-text">直接插入排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法步骤-2"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">算法步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码示例-2"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">代码示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能分析-2"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">性能分析</span></a></li></ol></li></ol>
         </nav>
     </aside>
    
@@ -358,18 +358,17 @@
 <li>在其后插入新元素  </li>
 <li>反复n-1趟排序  </li>
 </ul>
-<h2 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h2><pre><code>int main(){
-    int a[10] = {2,0,1,9,4,3,0};
-    //进行n-1趟排序
-    for(int i=1;i<=6;i++){ temp存放 int temp="a[i];" j temp小于前一个元素 while(j>=0&&temp<a[j-1]){ 把序列后移一位 a[j]="a[j-1];" j--; } 插入位置为j 打印输出 for(int i="0;i<7;i++){" printf("%d",a[i]); return 0; < code></a[j-1]){></=6;i++){></code></pre><blockquote>
-<p>输出结果：0 0 1 2 3 4 9</p>
+<h2 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">int main(){</span><br><span class="line">    int a[10] = {2,0,1,9,4,3,0};</span><br><span class="line">    //进行n-1趟排序</span><br><span class="line">    for(int i=1;i<=6;i++){< span><br><span class="line">        //temp存放</span><br><span class="line">        int temp = a[i];</span><br><span class="line">        //j</span><br><span class="line">        int j = i-1;</span><br><span class="line">        //temp小于前一个元素</span><br><span class="line">        while(j>=0&&temp<a[j-1]){< span><br><span class="line">            //把序列后移一位</span><br><span class="line">            a[j] = a[j-1];</span><br><span class="line">            j--;</span><br><span class="line">        }</span><br><span class="line">        //插入位置为j</span><br><span class="line">        a[j] = temp;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">     //打印输出</span><br><span class="line">    for(int i=0;i<7;i++){< span><br><span class="line">        printf("%d",a[i]);</span><br><span class="line">    }</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br><span class="line">```  </span><br><span class="line">> 输出结果：0 0 1 2 3 4 9</span><br><span class="line">## 性能分析 </span><br><span class="line">- 简单插入排序在最好情况下，需要比较n-1次，无需交换元素，时间复杂度为O(n)。  </span><br><span class="line">- 在最坏情况下，时间复杂度依然为O(n2)。  </span><br><span class="line">- 但是在数组元素随机排列的情况下，插入排序还是要优于上面两种排序的。  </span><br><span class="line">- 过程中需要一个临时变量temp，所需要的额外空间为1，空间复杂度则为O(1)。  </span><br><span class="line">- 元素交换时，相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。  </span><br><span class="line"></span><br><span class="line">| 时间复杂度 | 最好情况 | 最坏情况 | 平均复杂度 | 空间复杂度 | 稳定性 |</span><br><span class="line">| :-: | :-: | :-: | :-: | :-: |</span><br><span class="line">|简单插入排序|O(n)|O(n^2)|O(n^2)|O(1)|稳定|  </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"># **希尔排序** </span><br><span class="line">shellSort，又称“缩小增量排序”，是1959年D.L.shell提出的。</span><br><span class="line">## 算法步骤 </span><br><span class="line">- 先将整个待排序列分割成若干个子序列分别进行直接插入排序  </span><br><span class="line">- 然后依次缩减增量再进行排序  </span><br><span class="line">- 待整个序列中的元素基本有序时</span><br><span class="line">- 在对全体元素进行一次直接插入排序    </span><br><span class="line"></span><br><span class="line">## 代码示例</span><br></7;i++){<></span></a[j-1]){<></span></=6;i++){<></span></pre></td></tr></tbody></table></figure>
+<p>//从第一个子序列的第二条记录开始顺序扫描待排序列<br>void ShellInsert(RecordList L, int dk){<br>    for(i=dk+1;i<=l.length;i++)<br>        //属于哪一子序列<br>        if(L.r[i].key<l.r[i-dk].key){<br>            L.r[0] = L.r[i];<br>            //子序列增量减少<br>            for(j=i-dk;j>0 && (L.r[0].key<l.r[j].key);j-=dk) <br>                L.r[j+dk] = L.r[j];<br>                L.r[j+dk] = L.r[0];<br>        }<br>}<br>//直接插入<br>void ShellSort(RecordList L,int dlta[],int t){<br>    for(k=0;k<l.length;t++)<br>        ShellInsert(L,dlta[k]);<br>}<br><code>`</code></l.length;t++)<br></l.r[j].key);j-=dk)></l.r[i-dk].key){<br></=l.length;i++)<br></p>
+<blockquote>
+<p>输出结果：无</p>
 </blockquote>
 <h2 id="性能分析-2"><a href="#性能分析-2" class="headerlink" title="性能分析"></a>性能分析</h2><ul>
-<li>简单插入排序在最好情况下，需要比较n-1次，无需交换元素，时间复杂度为O(n)。  </li>
-<li>在最坏情况下，时间复杂度依然为O(n2)。  </li>
-<li>但是在数组元素随机排列的情况下，插入排序还是要优于上面两种排序的。  </li>
-<li>过程中需要一个临时变量temp，所需要的额外空间为1，空间复杂度则为O(1)。  </li>
-<li>元素交换时，相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。  </li>
+<li>序列越有序，排序越快</li>
+<li>一个好的希尔排序执行时间大程度依赖于增量的选取  </li>
+<li>大多情况下选用“增量每次除以2递减”  ，其时间复杂度为O(n^2)</li>
+<li>新的增量序列（2k-1，2k-1-1,2k-1-1-1，……7,3,1），其复杂度可以到达O(n^3/2)效率更好</li>
+<li>序列中相同的关键字其排序先后位置发生了改变，故希尔排序是不稳定的算法  </li>
 </ul>
 <table>
 <thead>
@@ -384,18 +383,16 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">简单插入排序</td>
-<td style="text-align:center">O(n)</td>
+<td style="text-align:center">希尔排序</td>
+<td style="text-align:center">O(n^3/2)</td>
 <td style="text-align:center">O(n^2)</td>
 <td style="text-align:center">O(n^2)</td>
 <td style="text-align:center">O(1)</td>
-<td>稳定</td>
+<td>不稳定</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<hr>
-<h1 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a><strong>希尔排序</strong></h1><script>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -420,7 +417,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2019-04-30T11:27:52.287Z" itemprop="dateUpdated">2019-04-30 19:27:52</time>
+    最后更新：<time datetime="2019-10-21T04:12:23.025Z" itemprop="dateUpdated">2019-10-21 12:12:23</time>
 </span>
 
 
@@ -447,7 +444,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
 
 
             
