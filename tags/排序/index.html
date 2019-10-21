@@ -6,7 +6,7 @@
     
     
     
-    <title>DoubleWing&#39;Blog | 喜欢就坚持吧！</title>
+    <title>标签: 排序 | DoubleWing&#39;Blog | 喜欢就坚持吧！</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
@@ -42,7 +42,7 @@
     <meta name="description" content="记录自己学习的小博客（笑~">
 <meta property="og:type" content="website">
 <meta property="og:title" content="DoubleWing&#39;Blog">
-<meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/page/2/index.html">
+<meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/tags/排序/index.html">
 <meta property="og:site_name" content="DoubleWing&#39;Blog">
 <meta property="og:description" content="记录自己学习的小博客（笑~">
 <meta property="og:locale" content="zh-CN">
@@ -105,7 +105,7 @@
                   </a>
               </li>
             
-              <li class="waves-block waves-effect">
+              <li class="waves-block waves-effect active">
                   <a href="/tags">
                     <i class="icon icon-lg icon-tags"></i>
                     <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
@@ -150,7 +150,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">DoubleWing&#39;Blog</div>
+        <div class="flex-col header-title ellipsis">标签: 排序</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -167,19 +167,29 @@
         </a>
     </div>
 </header>
-<header class="content-header index-header">
+<header class="content-header tags-header">
     
     
     <div class="container fade-scale">
         <div id="myheader">
             <h1 class="title">
-                 
-                    DoubleWing&#39;Blog
                 
             </h1>
             <h5 class="subtitle">
                 
-                    编程学习分享啦（笑）
+                    <h1 id="pagetitle" class="archivestitle"></h1>
+                    <script>
+                        if(location.href.indexOf('about')!=-1){
+                            pagetitle.textContent = 'DoubleWing';
+                        }else if(location.href.indexOf('tags')!=-1||location.href.indexOf('categories')!=-1){
+                            var a=location.href.substring(location.href.length-5,location.href.length-1);
+                            if(a==='tags'){
+                                pagetitle.textContent = '不积小流无以成江海';
+                            }else if(a==='ries'){
+                                pagetitle.textContent = '不积跬步无以至千里';
+                            }
+                        }
+                    </script>
                 
             </h5>
         </div>
@@ -187,55 +197,30 @@
 
 </header>
 
-<div class="container body-wrap">
-    <ul class="post-list">
-    
-        <li class="post-list-item fade">
-            <article id="post-散列-hash-学习" class="article-card article-type-post" itemprop="blogPost">
 
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/4cba6a27/">散列(hash)学习</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-05-01 16:27:20" datetime="2019-05-01T08:27:20.000Z" itemprop="datePublished">2019-05-01</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数                                                                              ...
-    
-        <div>
-            <a href="/posts/4cba6a27/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </div>
-    
-    <div class="post-footer">
+    <div class="container body-wrap fade">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/哈希/">哈希</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/查找/">查找</a></li></ul>
-
+            
+            
+            <h5 class="tag-tip">
+                <i class="icon icon-tag"></i>
+                关于
+                <span style="color:rgb(100, 100, 100)">排序</span>
+                共1篇文章
+            </h5>
+            <div class="waterfall">
+            
+                <article class="archive-article" onclick="location.href='/posts/4c06727b/'">
+    <div class="archive-article-date">
+      
+      <time class="my-post-time">
+        <i class="icon icon-lg icon-file-text-o"></i>
+        &nbsp;
+          2019-04-30
+      </time>
     </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-简单排序算法" class="article-card article-type-post" itemprop="blogPost">
-
-    
+    <div class="archive-article-inner">
+      
 
 
   
@@ -246,178 +231,14 @@
 
 
 
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-04-30 13:12:41" datetime="2019-04-30T05:12:41.000Z" itemprop="datePublished">2019-04-30</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        算法复杂度
-一个算法是由控制结构（顺序、分支和循环3种）和原操作（指固有数据类型的操作）构成的
-同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。
-算法分析的目的在于选择合适算法和改进算法。一个算法的评价主要从时间复杂度和空间复杂度来考虑。  
-
-时间复杂度
-一个算法中的语句执行次数。记为T(n),n称为问题的规模;若...
-    
-        <div>
-            <a href="/posts/4c06727b/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </div>
-    
-    <div class="post-footer">
-        
+      
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排序/">排序</a></li></ul>
 
     </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-理解学习MySQL" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/993e51d1/">理解学习MySQL</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2018-12-01 15:25:27" datetime="2018-12-01T07:25:27.000Z" itemprop="datePublished">2018-12-01</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
+  </article>
+            
+            </div>
         
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('...
-    
-        <div>
-            <a href="/posts/993e51d1/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-测试" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/24d91ba1/">测试</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2018-11-04 20:44:59" datetime="2018-11-04T12:44:59.000Z" itemprop="datePublished">2018-11-04</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('...
-    
-        <div>
-            <a href="/posts/24d91ba1/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-完全hexo-github搭建个人博客教程" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/6688b830/">hexo+github搭建个人博客教程</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2018-11-04 14:57:32" datetime="2018-11-04T06:57:32.000Z" itemprop="datePublished">2018-11-04</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        环境搭建Node.js
-下载并安装Node.js 官网： http://nodejs.org/download/
-安装的时候Custom Setup选择第一个，安装完成。
-
-Git下载安装及其配置
-下载并安装Git 官网:  https://git-scm.com/downloads
-安装Git一路Next即可,Git安装完成.  
-Git简...
-    
-        <div>
-            <a href="/posts/6688b830/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建/">搭建</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-    </ul>
-
-    
-<nav id="page-nav">
-    <div class="inner">
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </div>
-</nav>
-
 
 </div>
 
