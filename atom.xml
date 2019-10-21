@@ -269,7 +269,7 @@
     <link href="https://github.com/DoubleWing/DoubleWing.github.io//posts/4cba6a27/"/>
     <id>https://github.com/DoubleWing/DoubleWing.github.io//posts/4cba6a27/</id>
     <published>2019-05-01T08:27:20.000Z</published>
-    <updated>2019-06-24T06:10:56.488Z</updated>
+    <updated>2019-10-21T06:11:30.001Z</updated>
     
     <content type="html"><![CDATA[<h1 id="散列-hash"><a href="#散列-hash" class="headerlink" title="散列(hash)"></a><strong>散列(hash)</strong></h1><p>散列或者说哈希，通过学习我知道：<br>是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素<br>那么可以用key代表元素未转化，使用H(key)代表转化后的整数                                                                                                         </p><h2 id="散列函数"><a href="#散列函数" class="headerlink" title="散列函数"></a>散列函数</h2><ul><li>直接定址法<br>恒等变换或是线性变换，即直接使用key作为数组下标，H（key）= a*key+b；</li><li>平方取中法<br>使用KEY^2的中间若干位来作为hash值，H（key）= key^2的中间几位；</li><li>除留余数法<br>把key除以一个数mod所得到的余数作为hash值，H（key）= key % mod ；</li></ul><h2 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h2><p>我们发现有时候函数并不能代表一个值，通过除留余数法我们可能出现两个不同的key同时取余出相同的哈希值H（key），这时候就产生了冲突。  </p><h2 id="解决冲突的方法"><a href="#解决冲突的方法" class="headerlink" title="解决冲突的方法"></a>解决冲突的方法</h2><ul><li>线性探查法（Linear Probing）<br>当出现冲突时，就检查下一个位置哈希值H（key）+1的位置是否被占用，没有就使用；如果仍然被占用就继续往下查找直到表最大，超过表长返回表的首位继续查找，如此循环；不过此方法效率低下，容易出现连续的被占用情况。</li><li>平方探查法（Quadratic Probing）<br>为了避免反复查找位置，可以使用平方顺序进行查找，检查下一个位置H（key）+1^2，H（key）-1^2，H（key）+2^2，H（key）-2^2，H(key)+3^2,H(key+3^2……；当H（key）+k^2大于表长，则使用H（key）+k^2 %表长，H（key）-k^2小于0，则使用（（H(key)-k^2）%表长+表长）%表长，得到一个非负数的哈希值；</li><li>链地址法（拉链法）<br>将所有hash值相同的key连接成一个单链表，其中的List[h]存放H（key）= h的一条单链表，当冲突发生时就遍历链表来寻找所有H（key） = h的key；  </li></ul><h2 id="字符串hash"><a href="#字符串hash" class="headerlink" title="字符串hash"></a>字符串hash</h2><p>前面的方法都是基于key为整数，那么当想使用一个hash尽可能代表一个字符串就需要其他的方法。<br>可以浅显的理解字符串是数字、字母、特殊字符组成的，那么字符串随机组合分为七种。  </p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -282,8 +282,10 @@
     
     </summary>
     
+      <category term="数据结构与算法" scheme="https://github.com/DoubleWing/DoubleWing.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-      <category term="哈希" scheme="https://github.com/DoubleWing/DoubleWing.github.io/tags/%E5%93%88%E5%B8%8C/"/>
+    
+      <category term="查找" scheme="https://github.com/DoubleWing/DoubleWing.github.io/tags/%E6%9F%A5%E6%89%BE/"/>
     
   </entry>
   
