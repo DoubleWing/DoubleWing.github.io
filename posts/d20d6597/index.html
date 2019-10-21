@@ -39,18 +39,18 @@
 
 
     
-    <meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+    <meta name="description" content="交换类排序-快速排序选择类排序-堆排序归并类排序-二路归并排序分配类排序-链式基数排序外部排序-置换选择排序         document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="较复杂的排序算法">
 <meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/d20d6597/index.html">
 <meta property="og:site_name" content="DoubleWing&#39;Blog">
-<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta property="og:description" content="交换类排序-快速排序选择类排序-堆排序归并类排序-二路归并排序分配类排序-链式基数排序外部排序-置换选择排序         document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-21T04:26:24.732Z">
+<meta property="og:updated_time" content="2019-10-21T04:33:24.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="较复杂的排序算法">
-<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta name="twitter:description" content="交换类排序-快速排序选择类排序-堆排序归并类排序-二路归并排序分配类排序-链式基数排序外部排序-置换选择排序         document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img">
     
         <link rel="alternate" type="application/atom+xml" title="DoubleWing&#39;Blog" href="/atom.xml">
     
@@ -189,6 +189,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#交换类排序-快速排序"><span class="post-toc-number">1.</span> <span class="post-toc-text">交换类排序-快速排序</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#选择类排序-堆排序"><span class="post-toc-number">2.</span> <span class="post-toc-text">选择类排序-堆排序</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#归并类排序-二路归并排序"><span class="post-toc-number">3.</span> <span class="post-toc-text">归并类排序-二路归并排序</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#分配类排序-链式基数排序"><span class="post-toc-number">4.</span> <span class="post-toc-text">分配类排序-链式基数排序</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#外部排序-置换选择排序"><span class="post-toc-number">5.</span> <span class="post-toc-text">外部排序-置换选择排序</span></a></li></ol>
+        </nav>
+    </aside>
+   
 <article id="post-较复杂的排序算法" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -218,7 +225,7 @@
             阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <script>
+            <h1 id="交换类排序-快速排序"><a href="#交换类排序-快速排序" class="headerlink" title="交换类排序-快速排序"></a>交换类排序-快速排序</h1><h1 id="选择类排序-堆排序"><a href="#选择类排序-堆排序" class="headerlink" title="选择类排序-堆排序"></a>选择类排序-堆排序</h1><h1 id="归并类排序-二路归并排序"><a href="#归并类排序-二路归并排序" class="headerlink" title="归并类排序-二路归并排序"></a>归并类排序-二路归并排序</h1><h1 id="分配类排序-链式基数排序"><a href="#分配类排序-链式基数排序" class="headerlink" title="分配类排序-链式基数排序"></a>分配类排序-链式基数排序</h1><h1 id="外部排序-置换选择排序"><a href="#外部排序-置换选择排序" class="headerlink" title="外部排序-置换选择排序"></a>外部排序-置换选择排序</h1><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -243,7 +250,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2019-10-21T04:26:24.732Z" itemprop="dateUpdated">2019-10-21 12:26:24</time>
+    最后更新：<time datetime="2019-10-21T04:33:24.674Z" itemprop="dateUpdated">2019-10-21 12:33:24</time>
 </span>
 
 
@@ -325,7 +332,15 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/cc0ea54c/" id="post-prev" class="post-nav-link">
+        <h4 class="title">
+          上一篇：顺序查找
+        </h4>
+      </a>
+    </div>
   
 
   

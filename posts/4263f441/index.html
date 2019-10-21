@@ -6,13 +6,13 @@
     
     
     
-    <title>散列(hash)学习 | DoubleWing&#39;Blog | 喜欢就坚持吧！</title>
+    <title>平衡二叉树 | DoubleWing&#39;Blog | 喜欢就坚持吧！</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="哈希">
+    <meta name="keywords" content>
     
     
 
@@ -39,18 +39,17 @@
 
 
     
-    <meta name="description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数">
-<meta name="keywords" content="哈希">
+    <meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
 <meta property="og:type" content="article">
-<meta property="og:title" content="散列(hash)学习">
-<meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/index.html">
+<meta property="og:title" content="平衡二叉树">
+<meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/index.html">
 <meta property="og:site_name" content="DoubleWing&#39;Blog">
-<meta property="og:description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数">
+<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-24T06:10:56.488Z">
+<meta property="og:updated_time" content="2019-10-21T05:54:15.582Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="散列(hash)学习">
-<meta name="twitter:description" content="散列(hash)散列或者说哈希，通过学习我知道：是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素那么可以用key代表元素未转化，使用H(key)代表转化后的整数">
+<meta name="twitter:title" content="平衡二叉树">
+<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
     
         <link rel="alternate" type="application/atom+xml" title="DoubleWing&#39;Blog" href="/atom.xml">
     
@@ -152,7 +151,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">散列(hash)学习</div>
+        <div class="flex-col header-title ellipsis">平衡二叉树</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -189,21 +188,14 @@
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#散列-hash"><span class="post-toc-number">1.</span> <span class="post-toc-text">散列(hash)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#散列函数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">散列函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#冲突"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">冲突</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决冲突的方法"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">解决冲突的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字符串hash"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">字符串hash</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扩展"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">扩展</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
-   
-<article id="post-散列-hash-学习" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-平衡二叉树" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">散列(hash)学习</h1>
+        <h1 class="post-card-title">平衡二叉树</h1>
         <div class="post-meta">
             <i class="icon icon-lg icon-calendar-o"></i>
             发表于
-            <time class="post-time" title="2019-05-01 16:27:20" datetime="2019-05-01T08:27:20.000Z" itemprop="datePublished">2019-05-01</time>
+            <time class="post-time" title="2019-10-21 13:54:15" datetime="2019-10-21T05:54:15.000Z" itemprop="datePublished">2019-10-21</time>
 
             <br id="mybreak">
             
@@ -222,23 +214,10 @@
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="散列-hash"><a href="#散列-hash" class="headerlink" title="散列(hash)"></a><strong>散列(hash)</strong></h1><p>散列或者说哈希，通过学习我知道：<br>是一种将元素通过散列函数H（）转化为整数，使得整数可以尽量唯一地代表这个元素<br>那么可以用key代表元素未转化，使用H(key)代表转化后的整数                                                                                                         </p>
-<h2 id="散列函数"><a href="#散列函数" class="headerlink" title="散列函数"></a>散列函数</h2><ul>
-<li>直接定址法<br>恒等变换或是线性变换，即直接使用key作为数组下标，H（key）= a*key+b；</li>
-<li>平方取中法<br>使用KEY^2的中间若干位来作为hash值，H（key）= key^2的中间几位；</li>
-<li>除留余数法<br>把key除以一个数mod所得到的余数作为hash值，H（key）= key % mod ；</li>
-</ul>
-<h2 id="冲突"><a href="#冲突" class="headerlink" title="冲突"></a>冲突</h2><p>我们发现有时候函数并不能代表一个值，通过除留余数法我们可能出现两个不同的key同时取余出相同的哈希值H（key），这时候就产生了冲突。  </p>
-<h2 id="解决冲突的方法"><a href="#解决冲突的方法" class="headerlink" title="解决冲突的方法"></a>解决冲突的方法</h2><ul>
-<li>线性探查法（Linear Probing）<br>当出现冲突时，就检查下一个位置哈希值H（key）+1的位置是否被占用，没有就使用；如果仍然被占用就继续往下查找直到表最大，超过表长返回表的首位继续查找，如此循环；不过此方法效率低下，容易出现连续的被占用情况。</li>
-<li>平方探查法（Quadratic Probing）<br>为了避免反复查找位置，可以使用平方顺序进行查找，检查下一个位置H（key）+1^2，H（key）-1^2，H（key）+2^2，H（key）-2^2，H(key)+3^2,H(key+3^2……；当H（key）+k^2大于表长，则使用H（key）+k^2 %表长，H（key）-k^2小于0，则使用（（H(key)-k^2）%表长+表长）%表长，得到一个非负数的哈希值；</li>
-<li>链地址法（拉链法）<br>将所有hash值相同的key连接成一个单链表，其中的List[h]存放H（key）= h的一条单链表，当冲突发生时就遍历链表来寻找所有H（key） = h的key；  </li>
-</ul>
-<h2 id="字符串hash"><a href="#字符串hash" class="headerlink" title="字符串hash"></a>字符串hash</h2><p>前面的方法都是基于key为整数，那么当想使用一个hash尽可能代表一个字符串就需要其他的方法。<br>可以浅显的理解字符串是数字、字母、特殊字符组成的，那么字符串随机组合分为七种。  </p>
-<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><script>
+            <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -263,12 +242,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2019-06-24T06:10:56.488Z" itemprop="dateUpdated">2019-06-24 14:10:56</time>
+    最后更新：<time datetime="2019-10-21T05:54:15.582Z" itemprop="dateUpdated">2019-10-21 13:54:15</time>
 </span>
 
 
         
-        原文链接：<a href="/posts/4cba6a27/" target="_blank" rel="external">https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/</a>
+        原文链接：<a href="/posts/4263f441/" target="_blank" rel="external">https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/</a>
         
     </div>
     <footer>
@@ -290,8 +269,6 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/哈希/">哈希</a></li></ul>
-
 
             
 <div class="page-share-wrap">
@@ -300,7 +277,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/&title=《散列(hash)学习》 — DoubleWing'Blog&pic=https://github.com/DoubleWing/DoubleWing.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/&title=《平衡二叉树》 — DoubleWing'Blog&pic=https://github.com/DoubleWing/DoubleWing.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -310,22 +287,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/&title=《散列(hash)学习》 — DoubleWing'Blog&source=记录自己学习的小博客（笑~" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/&title=《平衡二叉树》 — DoubleWing'Blog&source=记录自己学习的小博客（笑~" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《散列(hash)学习》 — DoubleWing'Blog&url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/&via=https://github.com/DoubleWing/DoubleWing.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《平衡二叉树》 — DoubleWing'Blog&url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/&via=https://github.com/DoubleWing/DoubleWing.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -348,9 +325,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/posts/9753a2e/" id="post-prev" class="post-nav-link">
+      <a href="/posts/9439fc83/" id="post-prev" class="post-nav-link">
         <h4 class="title">
-          上一篇：Java集合框架
+          上一篇：B树
         </h4>
       </a>
     </div>
@@ -358,8 +335,8 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/posts/4c06727b/" id="post-next" class="post-nav-link">
-        <h4 class="title" data-hover="下一篇：基础的排序算法">下一篇：基础的排序算法</h4>
+      <a href="/posts/e5052ecb/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：二叉排序树">下一篇：二叉排序树</h4>
       </a>
     </div>
   
@@ -481,7 +458,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/&title=《散列(hash)学习》 — DoubleWing'Blog&pic=https://github.com/DoubleWing/DoubleWing.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/&title=《平衡二叉树》 — DoubleWing'Blog&pic=https://github.com/DoubleWing/DoubleWing.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -491,22 +468,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/&title=《散列(hash)学习》 — DoubleWing'Blog&source=记录自己学习的小博客（笑~" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/&title=《平衡二叉树》 — DoubleWing'Blog&source=记录自己学习的小博客（笑~" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《散列(hash)学习》 — DoubleWing'Blog&url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/&via=https://github.com/DoubleWing/DoubleWing.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《平衡二叉树》 — DoubleWing'Blog&url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/&via=https://github.com/DoubleWing/DoubleWing.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4cba6a27/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/4263f441/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -517,7 +494,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p class="wechatshare">扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACs0lEQVR42u3aQXLjMAwEQP//09lrtraizACk14fWKSVbMpsHAgHwesXX17fr+52fvvPvN9tPk188duHh4eEtlp4v4qf3tHeeV/W8uc9rxsPDw7vNS34gfyrZpiT85Ov58T4eHh7ex/DyDDYPLZuEHg8PD+/zecmhv2E8vw0PDw/vE3izEmrC3tx/a60FDw8PL+bNiqr/9+8r/T08PDy8dVf9+cB9XkSR8gYljOFq8fDw8C7w8gN3M16wGaVqAwMeHh7e+3mzo/nUwMEsVPzyNjw8PLyjvBsLzRv/eSLelkteybQCHh4e3og3CwabYYLZRsxCCB4eHt57ePkAVjt0NQsts6CFh4eH9x5eWwjIiwtJ06ttceXFZTw8PLwbvFlhov35dqCqTc1X0Q8PDw/vcp2zLVU8b1kSlpJ0/1itBQ8PDy+tNtQtq1nBYha1VsUIPDw8vKO8tunVlnHbFLx96pewhIeHh3eBt0l/T2Fm4OQ+Hh4e3j1eCz7VpjqbytfFCDw8PLwFL29cbahFErwY2PpxMgIPDw/vEG/W/j81C9o229qWGx4eHt5tXjtmukmX89CSt8qKZBoPDw9vwWvT2bZJ1i4uLz0Mq9R4eHh4R3kJMk+U8xbX7M3JpuPh4eG9h5eny3ny3T61CVp4eHh47+fNWlBtEWETBqICxCylxsPDwxvxkn/124Axa6HlafQw7uHh4eGtecVRGzeu8pJBXsZtU3A8PDy8s7yv8moz1T2ybbn99SkeHh7eBV574Lat/U2oaLfptbnw8PDwSl6bHM9a+6fKHHXRGQ8PD+8arx1smi2xrpTsn8LDw8P7AN7zcd8m5XnAaLceDw8P7zN5N1piz+upQw4eHh7eNV5eCGjT3LydloeQYmvw8PDwLvA2//DnLfx2NCEpdrxOXXh4eHgp7w+l3krf/Af3nwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3ay47CMAwFUP7/p2ek2ULR9SOFkU5XqJQmJ4vE2H484uvn73r+/P7O85U/8/z5+Q1rFx4eHl5r6slgVwNcPfn++cnbkjnj4eHhneblw2xN6OrN74+QfM54eHh438BLvk2erB4kySh4eHh438ybBM1JegIPDw/vv/DypOqJsLu6lEdyLXh4eHgxb1IA+9Tnm+p7eHh4eMWqeh4651v/pO2gPFs8PDy8A7wkbM0PjLx8ldyf9FY9kvwHHh4e3hJvXtzKExP5b3utBnh4eHif4lUPhry0lideq+0FeHh4eOd4veJTOaiNqZM2hRd38PDw8A7wqlt8fngkxf75WIW0BR4eHt4SLy9Z5amKJGFRbQ7IC2kvQmo8PDy8A7y1sLUYcG+V3KJkBB4eHt5mbByV/PMlqIbO1bF6d/Dw8PB2eaPqWfH+VpheOJzw8PDwVnl5mFstX02m2EsBv1ggPDw8vFt4veB196SqJj4uR8fDw8M7xsuLVbtlql55rJCMwMPDwzvAmyQmeuB8c98K6PHw8PB2eYU/9sEWnB8zSTK3GnBfJiPw8PDwVnlbW3kelOdHzuRXeHh4eHfyqgdD3o4wb6LqLSgeHh7eCV6vSJ8Hx0lKt9oaW1gIPDw8vAO8XnkpJ01aAaqpWzw8PLzTvHkxvpd66KVxywuKh4eHdzuvFy7nCYtqoFxN6eLh4eGd4OWBbHVDr5a+dktleHh4eOd4P8XrRImrF1KXkxF4eHh4S7xeRNorWfW2/mQh8PDw8O7n5a0AOWw+9WQO0R8DPDw8vGO8yaacb/15mL6VFMbDw8P7LC8PmqvNW9W3FVoc8PDw8L6AN0nmTpq08re9SEbg4eHhHeBVkwvV1oE8aJ7MpNxAgIeHh9fi9Qpg1QB3UhjL0x8LCQs8PDy8d7xfc1ruA43AJL0AAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
