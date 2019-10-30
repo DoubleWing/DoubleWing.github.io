@@ -6,13 +6,13 @@
     
     
     
-    <title>折半查找 | DoubleWing&#39;Blog | 喜欢就坚持吧！</title>
+    <title>大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1） | DoubleWing&#39;Blog | 喜欢就坚持吧！</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="查找,线性表">
+    <meta name="keywords" content>
     
     
 
@@ -39,18 +39,17 @@
 
 
     
-    <meta name="description" content="折半查找折半查找（Binary Search）技术，又称为二分查找，其前提是线性表中的记录有序，线性表必须采用线性存储。 折半查找的思想 取中间数字作为比较对象，若给定值与中间记录的关键字相等，则查找成功； 若给定值小于中间数字，则在左半区进行查找； 若给定值大于中间记录的关键字，则在右半区进行查找   不断重复上述步骤，直到找到——查找成功或查找区域无记录——查找失败算法实现1234567891">
-<meta name="keywords" content="查找,线性表">
+    <meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
 <meta property="og:type" content="article">
-<meta property="og:title" content="折半查找">
-<meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/index.html">
+<meta property="og:title" content="大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）">
+<meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/index.html">
 <meta property="og:site_name" content="DoubleWing&#39;Blog">
-<meta property="og:description" content="折半查找折半查找（Binary Search）技术，又称为二分查找，其前提是线性表中的记录有序，线性表必须采用线性存储。 折半查找的思想 取中间数字作为比较对象，若给定值与中间记录的关键字相等，则查找成功； 若给定值小于中间数字，则在左半区进行查找； 若给定值大于中间记录的关键字，则在右半区进行查找   不断重复上述步骤，直到找到——查找成功或查找区域无记录——查找失败算法实现1234567891">
+<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-29T09:08:27.576Z">
+<meta property="og:updated_time" content="2019-10-30T09:38:24.526Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="折半查找">
-<meta name="twitter:description" content="折半查找折半查找（Binary Search）技术，又称为二分查找，其前提是线性表中的记录有序，线性表必须采用线性存储。 折半查找的思想 取中间数字作为比较对象，若给定值与中间记录的关键字相等，则查找成功； 若给定值小于中间数字，则在左半区进行查找； 若给定值大于中间记录的关键字，则在右半区进行查找   不断重复上述步骤，直到找到——查找成功或查找区域无记录——查找失败算法实现1234567891">
+<meta name="twitter:title" content="大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）">
+<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
     
         <link rel="alternate" type="application/atom+xml" title="DoubleWing&#39;Blog" href="/atom.xml">
     
@@ -152,7 +151,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">折半查找</div>
+        <div class="flex-col header-title ellipsis">大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -189,26 +188,20 @@
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#折半查找"><span class="post-toc-number">1.</span> <span class="post-toc-text">折半查找</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#折半查找的思想"><span class="post-toc-number">2.</span> <span class="post-toc-text">折半查找的思想</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#算法实现"><span class="post-toc-number">3.</span> <span class="post-toc-text">算法实现</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#算法分析"><span class="post-toc-number">4.</span> <span class="post-toc-text">算法分析</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#算法复杂度"><span class="post-toc-number">5.</span> <span class="post-toc-text">算法复杂度</span></a></li></ol>
-        </nav>
-    </aside>
-   
-<article id="post-折半查找" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-大数据Hadoop的环境搭建及应用实践（-毕业设计-）（1）" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">折半查找</h1>
+        <h1 class="post-card-title">大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）</h1>
         <div class="post-meta">
             <i class="icon icon-lg icon-calendar-o"></i>
             发表于
-            <time class="post-time" title="2019-10-21 13:52:53" datetime="2019-10-21T05:52:53.000Z" itemprop="datePublished">2019-10-21</time>
+            <time class="post-time" title="2019-10-29 16:25:27" datetime="2019-10-29T08:25:27.000Z" itemprop="datePublished">2019-10-29</time>
 
             <br id="mybreak">
             
-	<i class="icon icon-lg icon-folder-o"></i>
-	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数据结构与算法/">数据结构与算法</a></li></ul>
+<script>
+	mybreak.style="display:none";
+</script>
 
 
             <i>·</i>
@@ -224,20 +217,7 @@
             阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="折半查找"><a href="#折半查找" class="headerlink" title="折半查找"></a><em>折半查找</em></h1><p>折半查找（Binary Search）技术，又称为二分查找，其前提是线性表中的记录有序，线性表必须采用线性存储。</p>
-<h1 id="折半查找的思想"><a href="#折半查找的思想" class="headerlink" title="折半查找的思想"></a>折半查找的思想</h1><ul>
-<li>取中间数字作为比较对象，若给定值与中间记录的关键字相等，则查找成功；</li>
-<li>若给定值小于中间数字，则在左半区进行查找；</li>
-<li>若给定值大于中间记录的关键字，则在右半区进行查找  </li>
-<li>不断重复上述步骤，直到找到——查找成功或查找区域无记录——查找失败<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int Binary_Search(int *a,int n, int key){</span><br><span class="line">    int low ,high,mid;</span><br><span class="line">    low =l;</span><br><span class="line">    high = n;</span><br><span class="line">    while(lwo<=high){< span><br><span class="line">        mid = (low+high) /2;</span><br><span class="line">        if(key<a[mid])< span><br><span class="line">            high=mid-1；</span><br><span class="line">        else if (key>a[mid])</span><br><span class="line">            low=mid+1;</span><br><span class="line">        else </span><br><span class="line">            return mid;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></a[mid])<></span></=high){<></span></pre></td></tr></tbody></table></figure>
-</li>
-</ul>
-<h1 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h1><ul>
-<li>将这个有序数组转化为二叉树，也就是说折半查找把一棵树分为两棵子树</li>
-<li>只需要查找其中一个子树，等同于工作量少了一半，再继续拆分成两个子树，工作量少了一半</li>
-<li>最好的情况一定是1次直接查找到，最坏是查找[log2^n]+1次</li>
-</ul>
-<h1 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h1><script>
+            <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -262,12 +242,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2019-10-29T09:08:27.576Z" itemprop="dateUpdated">2019-10-29 17:08:27</time>
+    最后更新：<time datetime="2019-10-30T09:38:24.526Z" itemprop="dateUpdated">2019-10-30 17:38:24</time>
 </span>
 
 
         
-        原文链接：<a href="/posts/8dbf9480/" target="_blank" rel="external">https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/</a>
+        原文链接：<a href="/posts/42229cfc/" target="_blank" rel="external">https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/</a>
         
     </div>
     <footer>
@@ -289,8 +269,6 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/查找/">查找</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线性表/">线性表</a></li></ul>
-
 
             
 <div class="page-share-wrap">
@@ -299,7 +277,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/&title=《折半查找》 — DoubleWing'Blog&pic=https://github.com/DoubleWing/DoubleWing.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/&title=《大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）》 — DoubleWing'Blog&pic=https://github.com/DoubleWing/DoubleWing.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -309,22 +287,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/&title=《折半查找》 — DoubleWing'Blog&source=记录自己学习的小博客（笑~" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/&title=《大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）》 — DoubleWing'Blog&source=记录自己学习的小博客（笑~" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《折半查找》 — DoubleWing'Blog&url=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/&via=https://github.com/DoubleWing/DoubleWing.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）》 — DoubleWing'Blog&url=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/&via=https://github.com/DoubleWing/DoubleWing.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -344,21 +322,13 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/posts/e5052ecb/" id="post-prev" class="post-nav-link">
-        <h4 class="title">
-          上一篇：二叉排序树
-        </h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/posts/cc0ea54c/" id="post-next" class="post-nav-link">
-        <h4 class="title" data-hover="下一篇：顺序查找">下一篇：顺序查找</h4>
+      <a href="/posts/cf527c99/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：golang编写聊天小程序demo">下一篇：golang编写聊天小程序demo</h4>
       </a>
     </div>
   
@@ -480,7 +450,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/&title=《折半查找》 — DoubleWing'Blog&pic=https://github.com/DoubleWing/DoubleWing.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/&title=《大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）》 — DoubleWing'Blog&pic=https://github.com/DoubleWing/DoubleWing.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -490,22 +460,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/&title=《折半查找》 — DoubleWing'Blog&source=记录自己学习的小博客（笑~" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/&title=《大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）》 — DoubleWing'Blog&source=记录自己学习的小博客（笑~" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《折半查找》 — DoubleWing'Blog&url=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/&via=https://github.com/DoubleWing/DoubleWing.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《大数据Hadoop的环境搭建及应用实践（*毕业设计*）（1）》 — DoubleWing'Blog&url=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/&via=https://github.com/DoubleWing/DoubleWing.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/8dbf9480/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://github.com/DoubleWing/DoubleWing.github.io/posts/42229cfc/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -516,7 +486,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p class="wechatshare">扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3aQW7jMBAEQP//08l1g8De7hnScIDSKbBliaUAnFGTj0d8fP1z/P782TlfL4/knN9nPm4ceHh4eIuh54N4dp3kXvmoNg8ODw8P7zYvuUH+q+QxteUnKRJ4eHh4n8zLJ/S8tCQPCw8PD+8v8vJJv40P8jACDw8P7xN47aXz9nffLr8pa8HDw8OLeftG+f1/X1nfw8PDw1uvqicFIGmFN+Fvu8ngx6/w8PDwLvDaJf8b+Nd3bwsDHh4e3nt4+Wv/66EnZaA981iYi4eHh3eI107u0RNaPLJNmhLl03h4eHhrXjLR5yVhP+h8MSz/J+Hh4eHd4+XN8WzT1ay0zIoWHh4e3j1eQpoNMY8MZktc0bIZHh4e3jXeJpjIb99uqGpb8+JdAQ8PD2/Baxf7k6k5H1zyed7uR5sG8PDw8Na8PHjdnJOHDvm3wzACDw8P7yhv1jTn7fh+um/LFR4eHt4N3j6cnUWxbVg8a83x8PDw7vFmGwI2n89i4s3WBzw8PLyzvLOkA03wYsPWMMzFw8PDW/DahjUPJmZt+uz6eHh4eO/hFQtLbbc+asTbpbIoa8HDw8Nb8/JhzVrtdnD5wlikwMPDw7vGy1/+89giH3r7gIrYFw8PD+8Cr51w80AhucKsgU7uhYeHh3ebN7t9UiTa1vxYvrLPWvDw8PDiKHb28j+sRYfKT1QY8PDw8K7xoqn2ZcTQsttYuV4ew8PDwzvKm20tTR7KDDlbbHv6LR4eHt4FXjvh5k3tvvluf/vYHHh4eHglr710fp22gc5LRV6K8PDw8O7xjsWm64CjrWZRYcDDw8P7MF5+tbw1zz/5z0PBw8PD+zBevtLUxrt5qjCsG3h4eHhrXjKstgzkwzq1ESHaGYGHh4e35m1e+PMYot2akEe9Bw48PDy8lPcNuuZK36SB6YsAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtUlEQVR42u3aQXKkMBAEQP//096IvY7BVd3IM4fkRGAGlDogubq/vuLj+/9xf35/5f766z2v569PeOzAw8PDGw09eVnyguTO+3uu3nt//fKZeHh4eMd4+WvuB3r/tGTi9m/Bw8PD+xzefpOdfOLbbT0eHh7e5/OSAeUBRDISPDw8vM/ktaFqHuMmE9RO5ZGsBQ8PDy/mPVUA+8vzN9T38PDw8ILPa751bp+WtxpsDjw8PLwTvGTbOlsw2mAijyTqdgQ8PDy8A7x9kb5t0soDiPavv0wQHh4e3kO8WdtTG93mZbDN/b9sqfHw8PDWvCQmaMv5G+qmTeGHK3h4eHgHePsyWDvo2drVTtljVT48PDy8MgZtG7CSK+3T7ktixbYbDw8P71FeW+B/qkC1oQ6zFjw8PLw1L48A8lCg3Tonb2yjBzw8PLy/5OVFqU1Emy8Js2g4mj88PDy8NS/5xM8iiVn5alMG+2FhwMPDw3uUlwA2oUNbsmpbAS6nEg8PD+8Yr/2gP1WmSn41Gw8eHh7eOV4yxP0yMIt02+cn9+Ph4eHtecU/9nHosClxbTbcddaCh4eHN+LlsFkMUa9LoyA4X6jw8PDw9ry2s3XWdDVropqV0PDw8PBO89rFoG2WSuLXtimhnRo8PDy8E7zN1vZ+iPsSWrtc4eHh4Z3m5XHqbDu7WRJmyxIeHh7ee3nJZ31WxGrj41mki4eHh3eCNytu5QvJwe6wh4p2eHh4eC3vuzzyXyVha/vRb8eDh4eHd4K32fK2gcKzUQUeHh7ee3lPLQbthnjTgpDEynh4eHinebNodVaymm2dVxEtHh4e3pt4+Uc5jyQ2kxi1OODh4eF9AK9tRJiFEbOpuQwj8PDw8A7w2nChbQXIhzUbyeV04OHh4R3gzQpg7TZ6UxibtRrg4eHhHeD9A8rIXpM7g1b4AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="查找算法,树">
+    <meta name="keywords" content="查找,树">
     
     
 
@@ -39,18 +39,18 @@
 
 
     
-    <meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
-<meta name="keywords" content="查找算法,树">
+    <meta name="description" content="B树（多路查找树）B树（B-tree）是一种平衡的多路查找树。节点最大的孩子数目称为B树的阶（order） B树的结构 如果根节点不是叶子节点，则其至少有两棵子树 每一个非根节点的分支节点都有k-1个元素和k个孩子，其中[m/2] {               img.remove();               el.style.color = &apos;inherit&apos;;">
+<meta name="keywords" content="查找,树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="B树">
 <meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/9439fc83/index.html">
 <meta property="og:site_name" content="DoubleWing&#39;Blog">
-<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta property="og:description" content="B树（多路查找树）B树（B-tree）是一种平衡的多路查找树。节点最大的孩子数目称为B树的阶（order） B树的结构 如果根节点不是叶子节点，则其至少有两棵子树 每一个非根节点的分支节点都有k-1个元素和k个孩子，其中[m/2] {               img.remove();               el.style.color = &apos;inherit&apos;;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-21T06:30:53.454Z">
+<meta property="og:updated_time" content="2019-10-30T09:37:43.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B树">
-<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta name="twitter:description" content="B树（多路查找树）B树（B-tree）是一种平衡的多路查找树。节点最大的孩子数目称为B树的阶（order） B树的结构 如果根节点不是叶子节点，则其至少有两棵子树 每一个非根节点的分支节点都有k-1个元素和k个孩子，其中[m/2] {               img.remove();               el.style.color = &apos;inherit&apos;;">
     
         <link rel="alternate" type="application/atom+xml" title="DoubleWing&#39;Blog" href="/atom.xml">
     
@@ -189,6 +189,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#B树（多路查找树）"><span class="post-toc-number">1.</span> <span class="post-toc-text">B树（多路查找树）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#B树的结构"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">B树的结构</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+   
 <article id="post-B树" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -217,7 +224,14 @@
             阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <script>
+            <h1 id="B树（多路查找树）"><a href="#B树（多路查找树）" class="headerlink" title="B树（多路查找树）"></a>B树（多路查找树）</h1><p>B树（B-tree）是一种平衡的多路查找树。节点最大的孩子数目称为B树的阶（order）</p>
+<h2 id="B树的结构"><a href="#B树的结构" class="headerlink" title="B树的结构"></a>B树的结构</h2><ul>
+<li>如果根节点不是叶子节点，则其至少有两棵子树</li>
+<li>每一个非根节点的分支节点都有k-1个元素和k个孩子，其中[m/2]<= k <="m.<br">每一个叶子节点n都有k-1个元素，其中[m/2]<= k <="m</li">
+<li>所以叶子节点都位于同一层次</li>
+<li>所有分支节点包含下列信息数据（n，A0,K1,A1,K2….,Kn，An）为关键字</li>
+</=></=></li></ul>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -242,7 +256,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2019-10-21T06:30:53.454Z" itemprop="dateUpdated">2019-10-21 14:30:53</time>
+    最后更新：<time datetime="2019-10-30T09:37:43.625Z" itemprop="dateUpdated">2019-10-30 17:37:43</time>
 </span>
 
 
@@ -269,7 +283,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/查找算法/">查找算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树/">树</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/查找/">查找</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树/">树</a></li></ul>
 
 
             
@@ -337,8 +351,8 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/posts/4263f441/" id="post-next" class="post-nav-link">
-        <h4 class="title" data-hover="下一篇：平衡二叉树">下一篇：平衡二叉树</h4>
+      <a href="/posts/e5052ecb/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：二叉排序树">下一篇：二叉排序树</h4>
       </a>
     </div>
   

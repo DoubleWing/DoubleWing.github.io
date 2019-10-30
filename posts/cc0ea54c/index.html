@@ -39,18 +39,18 @@
 
 
     
-    <meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+    <meta name="description" content="顺序查找顺序查找（Sequential Search）又叫做线性查找，是基本的查找技术 线性查找的思想 从表开始的第一个或最后一个开始，逐个进行记录的关键字和给与的定值进行比较 若相同，则查找成功 若遍历全表全部不同则查找失败  算法实现12345678910/*a为数组，n为查找的数组长度，key为查找的关键字*/int Sequential Search(int *a,int n,int ke">
 <meta name="keywords" content="查找,线性表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="顺序查找">
 <meta property="og:url" content="https://github.com/DoubleWing/DoubleWing.github.io/posts/cc0ea54c/index.html">
 <meta property="og:site_name" content="DoubleWing&#39;Blog">
-<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta property="og:description" content="顺序查找顺序查找（Sequential Search）又叫做线性查找，是基本的查找技术 线性查找的思想 从表开始的第一个或最后一个开始，逐个进行记录的关键字和给与的定值进行比较 若相同，则查找成功 若遍历全表全部不同则查找失败  算法实现12345678910/*a为数组，n为查找的数组长度，key为查找的关键字*/int Sequential Search(int *a,int n,int ke">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-21T06:26:17.247Z">
+<meta property="og:updated_time" content="2019-10-29T09:13:44.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="顺序查找">
-<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta name="twitter:description" content="顺序查找顺序查找（Sequential Search）又叫做线性查找，是基本的查找技术 线性查找的思想 从表开始的第一个或最后一个开始，逐个进行记录的关键字和给与的定值进行比较 若相同，则查找成功 若遍历全表全部不同则查找失败  算法实现12345678910/*a为数组，n为查找的数组长度，key为查找的关键字*/int Sequential Search(int *a,int n,int ke">
     
         <link rel="alternate" type="application/atom+xml" title="DoubleWing&#39;Blog" href="/atom.xml">
     
@@ -189,6 +189,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#顺序查找"><span class="post-toc-number">1.</span> <span class="post-toc-text">顺序查找</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#线性查找的思想"><span class="post-toc-number">2.</span> <span class="post-toc-text">线性查找的思想</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#算法实现"><span class="post-toc-number">3.</span> <span class="post-toc-text">算法实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法优化"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">算法优化</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#算法分析"><span class="post-toc-number">4.</span> <span class="post-toc-text">算法分析</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#算法复杂度"><span class="post-toc-number">5.</span> <span class="post-toc-text">算法复杂度</span></a></li></ol>
+        </nav>
+    </aside>
+   
 <article id="post-顺序查找" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -217,7 +224,22 @@
             阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <script>
+            <h1 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h1><p>顺序查找（Sequential Search）又叫做线性查找，是基本的查找技术</p>
+<h1 id="线性查找的思想"><a href="#线性查找的思想" class="headerlink" title="线性查找的思想"></a>线性查找的思想</h1><ul>
+<li>从表开始的第一个或最后一个开始，逐个进行记录的关键字和给与的定值进行比较</li>
+<li>若相同，则查找成功</li>
+<li>若遍历全表全部不同则查找失败</li>
+</ul>
+<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/*a为数组，n为查找的数组长度，key为查找的关键字*/</span><br><span class="line"></span><br><span class="line">int Sequential Search(int *a,int n,int key){</span><br><span class="line">    int i;</span><br><span class="line">    for(i=1;i<=n;i++){< span><br><span class="line">        if (a[i]==key)</span><br><span class="line">            return i;</span><br><span class="line">    }</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></=n;i++){<></span></pre></td></tr></tbody></table></figure>
+<h2 id="算法优化"><a href="#算法优化" class="headerlink" title="算法优化"></a>算法优化</h2><p>每次循环都会去处理i是否越界，可以使用“驻点”免去i的判断具体代码如下：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int Sequential_Search2(int *a,int n,int key){</span><br><span class="line">    int i;</span><br><span class="line">    a[0]=key;</span><br><span class="line">    i=n;</span><br><span class="line">    while(a[i]!=key){</span><br><span class="line">        i--;</span><br><span class="line">    }</span><br><span class="line">    return i;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>放置驻点可以在数据量多时免去i的判断提升效率。</p>
+<h1 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h1><ul>
+<li>顺序查找算法有非常大的缺点，查找的效率低下，但是当对于小数据查找时也非常适用</li>
+<li>顺序查找最好的时间复杂度即是1，第一个位置就找到</li>
+<li>最坏的查找时间复杂度是最后一个位置，为O（n）  </li>
+</ul>
+<h1 id="算法复杂度"><a href="#算法复杂度" class="headerlink" title="算法复杂度"></a>算法复杂度</h1><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -242,7 +264,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2019-10-21T06:26:17.247Z" itemprop="dateUpdated">2019-10-21 14:26:17</time>
+    最后更新：<time datetime="2019-10-29T09:13:44.936Z" itemprop="dateUpdated">2019-10-29 17:13:44</time>
 </span>
 
 
